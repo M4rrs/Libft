@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isalnum(int	c)
 {
@@ -15,10 +14,13 @@ int	ft_isalnum(int	c)
 	return (alpha || num);
 }
 
+/*#include <stdio.h>
+#include <ctype.h>
+
 int	main(void)
 {
 	printf("%d\n", isalnum('\n'));
 	printf("%d", ft_isalnum('\n'));
 
 	return (0);
-}
+}*/

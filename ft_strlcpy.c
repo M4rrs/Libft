@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char	*dst, const char	*src, size_t	dstsize)
 {
@@ -19,13 +19,4 @@ size_t	ft_strlcpy(char	*dst, const char	*src, size_t	dstsize)
 		dst[j] = '\0';
 	}
 	return (i);
-}
-
-int main()
-{
-    char    *a = "hellothe";
-    char    b[10];
-
-    printf("%s, %zu", b, ft_strlcpy(b, a, 6));
-    return (0);
 }
