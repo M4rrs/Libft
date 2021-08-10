@@ -6,8 +6,8 @@ char	*ft_strrchr(const char	*s, int	c)
 	unsigned char	*str;
 
 	str = (unsigned char *)s;
-	i = ft_strlen(str);
-	if (str[i] == c)
+	i = ft_strlen((char *)s);
+	if (str[i] == '\0')
 		return ((char *)&str[i]);
 	while (i >= 0)
 	{
