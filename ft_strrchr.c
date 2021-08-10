@@ -7,8 +7,6 @@ char	*ft_strrchr(const char	*s, int	c)
 
 	str = (unsigned char *)s;
 	i = ft_strlen((char *)s);
-	if (str[i] == '\0')
-		return ((char *)&str[i]);
 	while (i >= 0)
 	{
 		if (str[i] == c)
