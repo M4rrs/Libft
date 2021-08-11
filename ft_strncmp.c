@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char	*s1, const char	*s2, size_t	n)
 {
@@ -13,15 +12,4 @@ int	ft_strncmp(const char	*s1, const char	*s2, size_t	n)
 		i++ ;
 	}
 	return (0);
-}
-
-int	main(void)
-{	
-	char	*a = "Hiroki";
-	char	*b = "HirokI";
-	char	*c = "Hiroki";
-	char	*d = "HirokI";
-
-	printf("%d\n", strncmp(a, b, 6));
-    printf("%d", ft_strncmp(c, d, 6));
 }
