@@ -1,52 +1,32 @@
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
+int		ft_memcmp(const void	*s1, const void	*s2, size_t	n)
 {
-	size_t			i;
-	char			*d;
-	char			*s;
+	size_t	i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	d = (char *)dest;
-	s = (char *)src;
-	while (i < n)
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while ((str1[i] || str2[i]) && i < n)
 	{
-		d[i] = s[i];
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (d);
-}
-
-void	*ft_memmove(void	*dest, const void	*src, size_t	n)
-{
-	char	*s;
-	char	*d;
-
-	s = (char *)src;
-	d = (char *)dest;
-	if (!s && !d)
-		return (NULL);
-	if (s < d)
-		while (n--)
-			d[n] = s[n];
-	else
-		ft_memcpy(d, s, n);
-	return (dest);
+	return (0);
 }
 
 int	main()
 {
-	char a[30] = "Hello my name is mars";
-	char b[30] = "Hello my name is mars";
+	char *a = "Jello";
+	char *b = "Hello";
+	char *c = "Jello";
+	char *d = "Hello";
 
-	printf("%s\n", a);
-	memmove(a, a + 7, 8);
-	printf("%s\n", a);
-
-	printf("%s\n", b);
-	ft_memmove(b, b + 7, 8);
-	printf("%s\n", b);
+	printf("%d\n", ft_memcmp(a, b, 3));
+	printf("%d", memcmp(c, d, 3));
 }

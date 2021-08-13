@@ -3,9 +3,9 @@
 char	*ft_strrchr(const char	*s, int	c)
 {
 	size_t			i;
-	unsigned char	*str;
+	char			*str;
 
-	str = (unsigned char *)s;
+	str = (char *)s;
 	i = ft_strlen((char *)s);
 	while (i >= 0)
 	{
