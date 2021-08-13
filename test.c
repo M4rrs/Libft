@@ -1,42 +1,52 @@
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlen(const char	*s)
+void	*ft_memcpy(void	*dest, const void	*src, size_t	n)
 {
-	size_t	i;
+	size_t			i;
+	char			*d;
+	char			*s;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (dst[i] && i < dstsize)
-		i++;
-	while (src[j] && (i + j < dstsize - 1))
+	d = (char *)dest;
+	s = (char *)src;
+	while (i < n)
 	{
-		dst[i + j] = src[j];
-		j++;
+		d[i] = s[i];
+		i++;
 	}
-	if (i != dstsize)
-		dst[i + j] = '\0';
-	return (i + ft_strlen(src));
+	return (d);
 }
 
-int main()
+void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 {
-    char a[100] = "abcdefghijklmno";
-    char b[100] = "pqrstuvwxyz";
+	char	*s;
+	char	*d;
 
-	printf("%lu\n", ft_strlcat(a, b, 32));
-    printf("%s", a);
-    return (0);
+	s = (char *)src;
+	d = (char *)dest;
+	if (!s && !d)
+		return (NULL);
+	if (s < d)
+		while (n--)
+			d[n] = s[n];
+	else
+		ft_memcpy(d, s, n);
+	return (dest);
+}
+
+int	main()
+{
+	char a[30] = "Hello my name is mars";
+	char b[30] = "Hello my name is mars";
+
+	printf("%s\n", a);
+	memmove(a, a + 7, 8);
+	printf("%s\n", a);
+
+	printf("%s\n", b);
+	ft_memmove(b, b + 7, 8);
+	printf("%s\n", b);
 }
