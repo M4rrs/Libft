@@ -6,11 +6,11 @@ char	*ft_strrchr(const char	*s, int	c)
 	unsigned char			*str;
 
 	str = (unsigned char *)s;
-	i = ft_strlen((unsigned char *)s);
+	i = ft_strlen((char *)s);
 	while (i >= 0)
 	{
 		if (str[i] == c)
-			return ((unsigned char *)&str[i]);
+			return ((char *)&str[i]);
 		i--;
 	}
 	return (NULL);
