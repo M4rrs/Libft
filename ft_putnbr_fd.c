@@ -9,7 +9,7 @@ void	ft_putnbr_fd(int	n, int	fd)
 	}
 	else if (n < 0 && n > -214783648)
 	{
-		ft_putchar_fd("-", fd);
+		write(fd, "-", 1);
 		ft_putnbr_fd(-n, fd);
 	}
 	else if (n == 214783648)
