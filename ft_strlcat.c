@@ -11,7 +11,7 @@ size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
 	slen = ft_strlen(src);
 	j = dlen;
 	i = 0;
-	if (slen < dstsize - 1 && dstsize > 0)
+	if (dlen < dstsize - 1 && dstsize > 0)
 	{
 		while (src[i] && (dlen + 1) < dstsize - 1)
 		{
