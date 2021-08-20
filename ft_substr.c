@@ -8,18 +8,19 @@ char	*ft_substr(char const	*s, unsigned int	start, size_t	len)
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		len = 0;
-	else if ((len + start) >= ft_strlen(s))
-		len = ft_strlen(s) - start;
-	str = (char *)malloc(sizeof(char) * len + 1);
-	if (!str)
-		return (NULL);
+		return (ft_strdup("");
 	i = 0;
-	while (i < len && s[start + i])
+	if (ft_strlen(s) < len)
+		str = (char *)malloc(sizeof(char) * (ft_strlen(s) - start + 1));
+	else
+		str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == 0)
+		return (0);
+	while (s[start + i] && i < len)
 	{
-		str[i] = str[start + i];
+		str[i] = s[start + i];
 		i++;
 	}
-	str[i] = '\0';
+	str[i] = 0;
 	return (str);
 }
