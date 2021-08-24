@@ -22,4 +22,4 @@ size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
 	return (dlen + slen);
 }
 
-//This shi was not straight forward until Pato explained it wtf
+//This shi was not straight forward until Pato explained it wtf.

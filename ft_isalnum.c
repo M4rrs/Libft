@@ -13,14 +13,3 @@ int	ft_isalnum(int	c)
 		num = 1;
 	return (alpha || num);
 }
-
-/*#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{
-	printf("%d\n", isalnum('\n'));
-	printf("%d", ft_isalnum('\n'));
-
-	return (0);
-}*/
