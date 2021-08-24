@@ -44,7 +44,7 @@ char	**ft_split(char const	*s, char	c)
 		ft_strlcpy(res[k++], s + i, j + 1);
 		i += j;
 	}
-	res[k] = "\0";
+	res[k] = 0;
 	return (res);
 }
 
