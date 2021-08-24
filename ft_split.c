@@ -11,9 +11,9 @@ static size_t	wordcount(char const	*s, char	c)
 	{
 		while (*(s + i) == c)
 			i++;
-		if (*(s + i) != c && *(s + i))
+		if (*(s + i) != c && *(s + i) != '\0')
 			count += 1;
-		while (*(s + i) != c && *(s + i))
+		while (*(s + i) != c && *(s + i) != '\0')
 			i++;
 	}
 	return (count);
@@ -33,12 +33,12 @@ char	**ft_split(char const	*s, char	c)
 	res = (char **)malloc(sizeof(s) * wordcount(s, c) + 1);
 	if (!res)
 		return (0);
-	while (*(s + i) && k < wordcount(s, c))
+	while (*(s + i) != '\0' && k < wordcount(s, c))
 	{
 		j = 0;
 		while (*(s + i) == c)
 			i++;
-		while (*(s + i + j) != c && *(s + i + j))
+		while (*(s + i + j) != c && *(s + i + j) != '\0')
 			j++;
 		res[k] = (char *)malloc(sizeof(*s) * (j + 1));
 		ft_strlcpy(res[k++], s + i, j + 1);
