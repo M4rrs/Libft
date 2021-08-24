@@ -38,7 +38,7 @@ char	*ft_itoa(int	n)
 		res[0] = '-';
 		nb *= -1;
 	}
-	res[len--] = '\0';
+	res[len--] = 0;
 	while (nb != 0)
 	{
 		res[len--] = (nb % 10) + '0';
