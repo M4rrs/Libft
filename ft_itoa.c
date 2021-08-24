@@ -31,11 +31,11 @@ char	*ft_itoa(int	n)
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (0);
+	if (nb == 0 && len == 1)
+		return (ft_strdup("0"));
 	res[len--] = 0;
 	if (!nb)
 		res[len] = '\0';
-	if (nb == 0 && len == 1)
-		return (ft_strdup("0"));
 	if (nb < 0)
 	{
 		res[0] = '-';
