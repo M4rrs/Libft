@@ -5,13 +5,13 @@ static int	intlen(int	nb)
 	int	len;
 
 	len = 0;
+	if (nb == 0)
+		len = 1;
 	if (nb < 0)
 	{
 		nb *= -1;
 		len++;
 	}
-	if (nb == 0)
-		len = 1;
 	while (nb)
 	{
 		nb /= 10;
@@ -31,6 +31,7 @@ char	*ft_itoa(int	n)
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (0);
+	res[len--] = 0;
 	if (!nb)
 		res[len] = 0;
 	if (nb < 0)
@@ -38,7 +39,6 @@ char	*ft_itoa(int	n)
 		res[0] = '-';
 		nb *= -1;
 	}
-	res[len--] = 0;
 	while (nb != 0)
 	{
 		res[len--] = (nb % 10) + '0';
