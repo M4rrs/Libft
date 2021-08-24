@@ -33,7 +33,7 @@ char	*ft_itoa(int	n)
 		return (0);
 	res[len--] = 0;
 	if (!nb)
-		res[len] = 0;
+		res[len] = '\0';
 	if (nb < 0)
 	{
 		res[0] = '-';
