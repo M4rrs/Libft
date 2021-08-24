@@ -40,7 +40,7 @@ char	**ft_split(char const	*s, char	c)
 			i++;
 		while (*(s + i + j) != c && *(s + i + j))
 			j++;
-		res[k] = (char *)malloc(sizeof(s) * (j + 1));
+		res[k] = (char *)malloc(sizeof(*s) * (j + 1));
 		ft_strlcpy(res[k++], s + i, j + 1);
 		i += j;
 	}
