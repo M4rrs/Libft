@@ -6,7 +6,7 @@ static int	intlen(int	nb)
 
 	len = 0;
 	if (nb == 0)
-		len = 1;
+		return (1);
 	if (nb < 0)
 	{
 		nb *= -1;

@@ -21,3 +21,5 @@ size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
 	dst[dlen + i] = '\0';
 	return (dlen + slen);
 }
+
+//This shi was not straight forward until Pato explained it wtf
