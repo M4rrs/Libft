@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/21 11:33:43 by nnorazma          #+#    #+#             */
+/*   Updated: 2022/07/08 11:50:20 by nnorazma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static size_t	wordcount(char const	*s, char	c)
+static	size_t	wordcount(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -19,7 +31,7 @@ static size_t	wordcount(char const	*s, char	c)
 	return (count);
 }
 
-char	**ft_split(char const	*s, char	c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	size_t	i;

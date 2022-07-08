@@ -6,13 +6,13 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 13:36:56 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/21 13:40:54 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/07/08 11:54:12 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long ft_atol(char *str)
+long	ft_atol(char *str)
 {
 	long	res;
 	int		sign;

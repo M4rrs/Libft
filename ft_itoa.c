@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/08 11:26:33 by nnorazma          #+#    #+#             */
+/*   Updated: 2022/07/08 11:27:14 by nnorazma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int	intlen(long	nb)
+static int	intlen(long nb)
 {
 	int	len;
 
@@ -20,7 +32,7 @@ static int	intlen(long	nb)
 	return (len);
 }
 
-char	*ft_itoa(int	n)
+char	*ft_itoa(int n)
 {
 	char	*res;
 	int		len;
@@ -46,7 +58,7 @@ char	*ft_itoa(int	n)
 		res[len--] = (nb % 10) + '0';
 		nb /= 10;
 	}
-	 return (res);
+	return (res);
 }
 
 //Intlen counts length of the integer, if n < 0, len++ = 1 for the '-' sign.
